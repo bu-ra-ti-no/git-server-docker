@@ -1,0 +1,19 @@
+RSAAuthentication yes
+PubkeyAuthentication yes
+PasswordAuthentication no
+
+# The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
+# but this is overridden so installations will only check .ssh/authorized_keys
+AuthorizedKeysFile .ssh/authorized_keys
+
+# Disabling sftp server
+Subsystem sftp /bin/false
+
+# disable stuff we don't need
+AllowAgentForwarding no
+AllowTcpForwarding no
+AllowStreamLocalForwarding no
+PermitOpen none
+PermitTunnel no
+PermitTTY no
+X11Forwarding no
